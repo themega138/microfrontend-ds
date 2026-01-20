@@ -1,0 +1,29 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text);
+}
+
+.showroom {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--ds-space-6);
+  display: grid;
+  gap: var(--ds-space-6);
+}
+
+.showroom-section {
+  display: grid;
+  gap: var(--ds-space-4);
+}
+
+.showroom-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-space-3);
+  align-items: center;
+}

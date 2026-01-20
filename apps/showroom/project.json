@@ -1,0 +1,60 @@
+{
+  "name": "showroom",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/showroom/src",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "options": {
+        "outputPath": "dist/apps/showroom",
+        "index": "apps/showroom/src/index.html",
+        "main": "apps/showroom/src/main.ts",
+        "polyfills": [],
+        "tsConfig": "apps/showroom/tsconfig.app.json",
+        "assets": ["apps/showroom/src/favicon.ico", "apps/showroom/src/assets"],
+        "styles": [
+          "apps/showroom/src/styles.scss",
+          "libs/design-tokens/src/lib/tokens.scss",
+          "libs/styles/src/lib/index.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "outputHashing": "all",
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "buildTarget": "showroom:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "showroom:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/showroom/**/*.ts", "apps/showroom/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/showroom/jest.config.ts"
+      }
+    }
+  }
+}
