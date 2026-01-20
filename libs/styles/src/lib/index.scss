@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ds-font-family-base);
+  font-size: var(--ds-font-size-3);
+  line-height: var(--ds-line-height-normal);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text);
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.ds-title {
+  font-size: var(--ds-font-size-5);
+  line-height: var(--ds-line-height-tight);
+  font-weight: 700;
+}
+
+.ds-heading {
+  font-size: var(--ds-font-size-4);
+  line-height: var(--ds-line-height-tight);
+  font-weight: 600;
+}
+
+.ds-body {
+  font-size: var(--ds-font-size-3);
+  color: var(--ds-color-text-muted);
+}
+
+.ds-surface {
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text);
+}
+
+.ds-surface-raised {
+  background: var(--ds-color-surface-raised);
+  color: var(--ds-color-text);
+}
+
+.ds-muted {
+  color: var(--ds-color-text-muted);
+}
+
+.ds-toast-panel {
+  z-index: var(--ds-z-index-toast);
+}
